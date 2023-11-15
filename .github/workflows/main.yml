@@ -23,7 +23,7 @@ jobs:
           GITHUB_REPO: ${{ toJson(github.repository) }}
           GITHUB_EVENT_NAME: ${{ toJson(github.event_name) }}
         with:
-          username: foo
+          username: ${{ github.actor }}
           teammates: 20k-ultra|char8|coffee-cup|dbanys|FarazPatankar|gschier|half0wl|JakeCooper|jitachi|melissa-hale|ndneighbor|ohrgaard|pierre-borckmans|railway-bot|tacLog|trif0lium|zuchka
           webhook: https://discord.com/api/webhooks/1174144680104038511/D8RTqckekpv1KfCmVp3kcfFSvV35MavPSuO3FHHxlXoxK8lM5DGwuZLI-XjhTQWB5m8D
       - name: Add label
