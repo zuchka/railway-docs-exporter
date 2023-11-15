@@ -2,11 +2,9 @@ name: Is Org Member
 
 on:
   issues:
-    types: [opened, edited]
+    types: [opened]
   pull_request:
-    types: [opened, edited]
-  issue_comment:
-    types: [opened, edited]
+    types: [opened]
 
 jobs:
   is-member:
