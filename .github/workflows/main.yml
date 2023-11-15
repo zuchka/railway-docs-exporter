@@ -40,8 +40,3 @@ jobs:
             Hello, @${{ github.actor }}! Thanks for your submission. 
             
             Our team will respond soon. If you need more immediate help, try our [Forum](https://community.railway.app/) or our [Discord](https://discord.com/invite/railway). Thanks!
-            - name: grab json
-      - name: grab JSON
-        env:   
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
