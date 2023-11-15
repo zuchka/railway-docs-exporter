@@ -27,7 +27,7 @@ jobs:
         with:
           username: foo
           teammates: 20k-ultra|char8|coffee-cup|dbanys|FarazPatankar|gschier|half0wl|JakeCooper|jitachi|melissa-hale|ndneighbor|ohrgaard|pierre-borckmans|railway-bot|tacLog|trif0lium|zuchka
-          webhook: https://discord.com/api/webhooks/1174144680104038511/D8RTqckekpv1KfCmVp3kcfFSvV35MavPSuO3FHHxlXoxK8lM5DGwuZLI-XjhTQWB5m8D
+          webhook: https://discord.com/api/webhooks/1174127777235087360/P9TUjZyf54gQUhr-eqIEhp_-c5ewg5Peh3OwIxHhfVi8Rnn5boIUkKkFErZ0IK1ijn1O
       - name: Add label
         uses: actions-ecosystem/action-add-labels@v1
         if: ${{ steps.is_org_member.outputs.result == 'false' }}
@@ -41,4 +41,4 @@ jobs:
           body: |
             Hello, @${{ github.actor }}! Thanks for your submission. 
             
-            Our team will respond soon. If you need more immediate help, try our Forum or our Discord. Thanks!
+            Our team will respond soon. If you need more immediate help, try our [Forum](https://community.railway.app/) or our [Discord](https://discord.com/invite/railway). Thanks!
