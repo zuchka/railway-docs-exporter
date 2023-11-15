@@ -16,14 +16,6 @@ jobs:
       - name: Checkout
         id: checkout
         uses: actions/checkout@v4
-      - name: grab json
-        env:   
-          GITHUB_ISSUE_URL: ${{ toJson(github.event.issue.html_url) }}
-          GITHUB_PR_URL: ${{ toJson(github.event.pull_request.html_url) }}
-          GITHUB_REPO: ${{ toJson(github.repository) }}
-          GITHUB_EVENT_NAME: ${{ toJson(github.event_name) }}
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
       - name: Is org member?
         id: is_org_member
         uses: zuchka/community-actions@v0.0.7
@@ -32,8 +24,6 @@ jobs:
           GITHUB_PR_URL: ${{ toJson(github.event.pull_request.html_url) }}
           GITHUB_REPO: ${{ toJson(github.repository) }}
           GITHUB_EVENT_NAME: ${{ toJson(github.event_name) }}
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: echo "$GITHUB_CONTEXT"
         with:
           username: foo
           teammates: 20k-ultra|char8|coffee-cup|dbanys|FarazPatankar|gschier|half0wl|JakeCooper|jitachi|melissa-hale|ndneighbor|ohrgaard|pierre-borckmans|railway-bot|tacLog|trif0lium|zuchka
@@ -52,3 +42,8 @@ jobs:
             Hello, @${{ github.actor }}! Thanks for your submission. 
             
             Our team will respond soon. If you need more immediate help, try our [Forum](https://community.railway.app/) or our [Discord](https://discord.com/invite/railway). Thanks!
+            - name: grab json
+      - name: grab JSON
+        env:   
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
